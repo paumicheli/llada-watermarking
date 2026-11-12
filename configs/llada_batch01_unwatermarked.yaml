@@ -1,0 +1,32 @@
+model_configuration:
+  model_name: GSAI-ML/LLaDA-8B-Instruct
+  tokenizer_name: GSAI-ML/LLaDA-8B-Instruct
+  torch_dtype: bfloat16
+  device_map: cuda
+  trust_remote_code: true
+  steps: 300
+  gen_length: 300
+  temperature: 0.5
+  remasking: random
+  model_specific_arguments:
+    cfg_scale: 0.0
+    mask_id: 126336
+    block_length: 25
+watermark_type: None
+watermark_config:
+  watermark_type: None
+evaluation_config:
+  num_samples: 20
+  batch_size: 1
+  evaluation_datasets:
+  - path: /content/watermark_batches/2-1_longform_qa_batch_01.jsonl
+    user_prompt: 'You are a helpful assistant, please answer the following question
+      within 300 words:
+
+      {context}
+
+      {input}'
+    chat: true
+    max_length: 150
+    min_length: 1
+  tqdm: true

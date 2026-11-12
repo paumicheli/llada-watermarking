@@ -1,0 +1,25 @@
+# Python / environment
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets (OpenAI API key, Hugging Face token, ...)
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Model caches and large downloads
+.cache/
+hf_cache/
+*.safetensors
+*.bin
+
+# Local clone of the official ETH repository (installed as a dependency, not versioned here)
+diffusion-lm-watermark/
+files/
+results/mini_*.jsonl
+results/test_*.jsonl
