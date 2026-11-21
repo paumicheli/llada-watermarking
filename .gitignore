@@ -23,3 +23,13 @@ diffusion-lm-watermark/
 files/
 results/mini_*.jsonl
 results/test_*.jsonl
+
+# Local archives and temporary files
+*.zip
+project_structure.txt
+
+# Intermediate experiment outputs
+results/*.jsonl
+results/attacks/**/*.jsonl
+
+# Keep CSV summaries available for GitHub
