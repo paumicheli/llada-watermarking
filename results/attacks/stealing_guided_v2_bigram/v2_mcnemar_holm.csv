@@ -1,0 +1,10 @@
+split_seed,min_support,ratio,comparison,method_a,method_b,n,asr_a,asr_b,difference_pp,A_only_success,B_only_success,discordant,p_raw,p_holm,holm_below_0_05
+42,2,0.1,v2_score_vs_random_pool,v2_sum_random,v2_random_pool,195,0.06666666666666667,0.046153846153846156,2.051282051282051,7,3,10,0.34375,1.0,False
+42,2,0.1,v2_vs_v1_equal_edits,v2_sum_random,v1_score_random_matched,195,0.06666666666666667,0.06666666666666667,0.0,5,5,10,1.0,1.0,False
+42,2,0.1,bigram_guidance_vs_random_synonym,v2_sum_guided,v2_sum_random,195,0.06666666666666667,0.06666666666666667,0.0,0,0,0,1.0,1.0,False
+42,2,0.2,v2_score_vs_random_pool,v2_sum_random,v2_random_pool,195,0.23076923076923078,0.22564102564102564,0.5128205128205138,6,5,11,1.0,1.0,False
+42,2,0.2,v2_vs_v1_equal_edits,v2_sum_random,v1_score_random_matched,195,0.23076923076923078,0.1641025641025641,6.666666666666668,21,8,29,0.0241195447742939,0.2170759029686451,False
+42,2,0.2,bigram_guidance_vs_random_synonym,v2_sum_guided,v2_sum_random,195,0.24102564102564103,0.23076923076923078,1.0256410256410247,3,1,4,0.625,1.0,False
+42,2,0.3,v2_score_vs_random_pool,v2_sum_random,v2_random_pool,195,0.27692307692307694,0.26666666666666666,1.0256410256410275,5,3,8,0.7265625,1.0,False
+42,2,0.3,v2_vs_v1_equal_edits,v2_sum_random,v1_score_random_matched,195,0.27692307692307694,0.2512820512820513,2.564102564102566,19,14,33,0.48685024166479707,1.0,False
+42,2,0.3,bigram_guidance_vs_random_synonym,v2_sum_guided,v2_sum_random,195,0.2923076923076923,0.27692307692307694,1.5384615384615385,6,3,9,0.5078125,1.0,False
