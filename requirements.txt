@@ -1,0 +1,24 @@
+# Core scientific stack
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+
+# Language models
+torch
+transformers
+accelerate
+datasets
+sentencepiece
+sentence-transformers
+
+# Watermark attacks and text processing
+markllm==0.1.5
+nltk
+tqdm
+PyYAML
+
+# Notebooks
+ipykernel
+ipython
