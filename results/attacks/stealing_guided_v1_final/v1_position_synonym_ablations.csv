@@ -1,0 +1,81 @@
+min_support,ratio,comparison,method_a,method_b,mean_diff_pp,std_diff_pp,a_better_splits,ties
+2,0.1,guided positions vs random positions,score_random_synonyms,fully_random,2.776850136095494,1.620920152456728,10,0
+2,0.1,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.3631990006241225,1.4574897903706836,5,1
+2,0.1,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.3079838793397075,1.3990575547807957,4,3
+2,0.1,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.0018178404174978735,1.266231478751284,7,0
+2,0.2,guided positions vs random positions,score_random_synonyms,fully_random,8.784640404821626,3.125322379625238,10,0
+2,0.2,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.6251912169117725,2.477786661330842,5,2
+2,0.2,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.4117431839919199,2.439960500068699,5,0
+2,0.2,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.7683189157099329,3.0465662043945683,6,0
+2,0.3,guided positions vs random positions,score_random_synonyms,fully_random,10.316565507505658,3.5182560801703007,10,0
+2,0.3,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.6978658710428924,3.2613810335301507,5,1
+2,0.3,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.06453345838250905,3.8418845167588107,4,0
+2,0.3,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.043632322910928,3.675237258296405,8,0
+2,0.4,guided positions vs random positions,score_random_synonyms,fully_random,9.217031242505733,2.2527513032260185,10,0
+2,0.4,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.8999502622900188,3.751405734191781,6,0
+2,0.4,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.8238949563772409,3.042814754267194,3,0
+2,0.4,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.6720317471646693,3.026173179074128,9,0
+2,0.5,guided positions vs random positions,score_random_synonyms,fully_random,10.538570069898565,3.7696135853354695,10,0
+2,0.5,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.2759029816545526,2.4951769116029205,8,1
+2,0.5,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.6022911010614315,2.8726764952145283,5,0
+2,0.5,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.8781940827159844,2.1148080572452472,10,0
+5,0.1,guided positions vs random positions,score_random_synonyms,fully_random,3.4441355619319602,1.5363300146085166,10,0
+5,0.1,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.1901880098739404,1.0668687997695778,9,0
+5,0.1,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.9250367316570929,1.6225490312791264,5,1
+5,0.1,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,-0.10368498942006685,1.5815262541283677,5,1
+5,0.2,guided positions vs random positions,score_random_synonyms,fully_random,8.561629331247682,2.7131740980410033,10,0
+5,0.2,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.478754189956689,2.9306813594630774,6,1
+5,0.2,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.30289856858950437,2.839651322796642,5,0
+5,0.2,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.0530033947245956,2.0239779186049094,8,1
+5,0.3,guided positions vs random positions,score_random_synonyms,fully_random,9.490017722492173,2.885486780498269,10,0
+5,0.3,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.8252896948137916,2.4095897178932613,8,2
+5,0.3,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.2610747612107164,2.158562908910109,7,0
+5,0.3,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.8740548416551035,2.5908949606142806,8,1
+5,0.4,guided positions vs random positions,score_random_synonyms,fully_random,8.561694706856834,3.63752740089917,10,0
+5,0.4,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.7439255207448052,3.3499140112089183,7,0
+5,0.4,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-1.0202304985620068,3.0375360838022507,4,0
+5,0.4,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.764156019306812,2.8792704145966144,8,1
+5,0.5,guided positions vs random positions,score_random_synonyms,fully_random,8.760474016751177,2.235030251001422,10,0
+5,0.5,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.2985890925962646,3.5013117114808003,7,1
+5,0.5,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.8861760719950714,2.0677172769442778,4,0
+5,0.5,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,3.184765164591336,2.339471715434782,10,0
+10,0.1,guided positions vs random positions,score_random_synonyms,fully_random,3.1385696130437966,1.4163450603772487,10,0
+10,0.1,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.15997631382366903,1.1382501514751884,5,2
+10,0.1,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.14902108844301581,1.219484091798925,3,3
+10,0.1,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.6108673904461369,1.2078034067211763,6,2
+10,0.2,guided positions vs random positions,score_random_synonyms,fully_random,6.70338103744079,1.655625563743114,10,0
+10,0.2,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.8428184934585754,2.226585837588431,7,2
+10,0.2,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.3111569766273347,1.438715574958323,4,3
+10,0.2,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,1.9953340491916502,2.6241496420827066,7,0
+10,0.3,guided positions vs random positions,score_random_synonyms,fully_random,7.275276276339254,3.06545389965906,10,0
+10,0.3,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.100195694561195,3.06901721622257,7,1
+10,0.3,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.45855606741120125,2.2307959841007126,5,3
+10,0.3,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,1.743661180274278,3.057946650250499,7,0
+10,0.4,guided positions vs random positions,score_random_synonyms,fully_random,6.8630490049791435,3.0585652325857646,10,0
+10,0.4,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.620851947805165,3.2226365180446037,8,0
+10,0.4,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,1.2965131536574583,1.7226541922205234,6,3
+10,0.4,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,1.324338794147707,2.9583526582185438,7,0
+10,0.5,guided positions vs random positions,score_random_synonyms,fully_random,7.049372113539228,3.2866817289284116,10,0
+10,0.5,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.7027278607716174,4.201427765475542,8,0
+10,0.5,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.22318635269870463,1.8965703365781799,2,2
+10,0.5,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,2.925914213470321,2.636245819372661,9,0
+15,0.1,guided positions vs random positions,score_random_synonyms,fully_random,2.311330131822218,1.099203367424469,10,0
+15,0.1,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.10096676366200356,0.529505841776386,4,3
+15,0.1,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.5697143275766547,1.4659518650291197,4,0
+15,0.1,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.10735886379155105,1.5371663219409761,3,3
+15,0.2,guided positions vs random positions,score_random_synonyms,fully_random,4.953070617521922,2.3428001065007837,10,0
+15,0.2,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.7135183208971773,2.4477153856413714,5,2
+15,0.2,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.9766315961421214,1.2846453492148988,2,1
+15,0.2,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,1.6893625462880244,2.8828742407301085,7,0
+15,0.3,guided positions vs random positions,score_random_synonyms,fully_random,6.75485173052571,2.6389184607143235,10,0
+15,0.3,random vs guided replacement (score ranked),score_random_synonyms,score_guided,2.0514243912389225,2.464039789308252,7,1
+15,0.3,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,1.384409801314937,1.6267765690415463,8,1
+15,0.3,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.5118412551662272,2.3577534613734694,6,2
+15,0.4,guided positions vs random positions,score_random_synonyms,fully_random,4.487353176332577,3.0363813791190575,9,0
+15,0.4,random vs guided replacement (score ranked),score_random_synonyms,score_guided,0.9813157430987729,3.011792583772809,7,0
+15,0.4,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,-0.32543987551866016,2.9046535877233994,4,2
+15,0.4,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,1.3067556186174332,3.889771696258,6,0
+15,0.5,guided positions vs random positions,score_random_synonyms,fully_random,5.617702025737836,2.4004226836206612,10,0
+15,0.5,random vs guided replacement (score ranked),score_random_synonyms,score_guided,1.3350762572924484,3.301957959370585,7,0
+15,0.5,score vs gain positions (random synonyms),score_random_synonyms,gain_random_synonyms,0.7170499320075387,2.157743205969338,5,1
+15,0.5,random vs guided replacement (gain ranked),gain_random_synonyms,gain_guided,0.6180263252849097,3.9144230527075266,6,0

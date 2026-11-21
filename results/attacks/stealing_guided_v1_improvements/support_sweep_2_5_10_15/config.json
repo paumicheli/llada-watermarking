@@ -1,0 +1,46 @@
+{
+  "attack_version": "v1_word_unigrams_multi_support_2026_11",
+  "split_seeds": [
+    42,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "ratios": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "min_supports": [
+    2,
+    5,
+    10,
+    15
+  ],
+  "alpha": 0.5,
+  "methods": [
+    "markllm",
+    "guided",
+    "random_synonyms_guided_positions",
+    "fully_random"
+  ],
+  "input_sha256": {
+    "results/Cleaned Data/watermarked_600.jsonl": "0642624bd882eae52cf0f40f6e01cf1bbff631131700d5552fa43adf83d1a835",
+    "results/Cleaned Data/unwatermarked_600.jsonl": "a334b970ced7cdead0d4dce6bcf586bc5deecdea681288bf2875b45e8ba61dd2",
+    "results/attacks/baseline_original.jsonl": "fb8901765ec0e41ea1387d5dfd9a2adb28dcc035f6e37999791289ced538bdbc",
+    "src/detection.py": "eb69431e6f8354d503dffa0fcf21bd6385855645489eb62f79b7471167859d46",
+    "results/attacks/synonym_substitution/synonym_substitution_r0.1.jsonl": "613520f8bc7a7370c8a6e5c4cd5d9dbd9846737e8eabca27b5a956af862d7153",
+    "results/attacks/synonym_substitution/synonym_substitution_r0.2.jsonl": "286ef1663334e9ddbf813c1ca0122b76875d419dd533c158b0d244db3396036a",
+    "results/attacks/synonym_substitution/synonym_substitution_r0.3.jsonl": "bdacbc49152333429c32cc4c2de101b520312c14f3b7384c1981d04fbf23d0a5",
+    "results/attacks/synonym_substitution/synonym_substitution_r0.4.jsonl": "55881d72ede8ab1017fd7341309ea99caf1c1bfa49afdf86ed30cf462f3cc190",
+    "results/attacks/synonym_substitution/synonym_substitution_r0.5.jsonl": "28dc8a0dca5537f4435e12fe576b66086921e9b294142f777c1070ec9efc495d"
+  }
+}

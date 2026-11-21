@@ -1,0 +1,46 @@
+{
+  "notebook": "12_stealing_guided_v1_final.ipynb",
+  "protocol": "exploratory; 10 overlapping stratified 400/200 splits; McNemar on reference split 42",
+  "mcnemar": "exact two-sided; Holm over 9 comparisons; selected after exploratory experiments",
+  "inputs": {
+    "results/attacks/stealing_guided_v1_improvements/support_sweep_2_5_10_15/config.json": "a10e6fd5e540b8990e6841f33b39227b1e9ac3c3837c9ff62b3adfca907b573e",
+    "results/attacks/stealing_guided_position_selection/config.json": "f97aedf61e5d22f9a807bd1c2c50313c7bd6c295d6884df1b7a3f725e1be54d6",
+    "results/attacks/stealing_guided_position_selection/position_selection_summary.csv": "f2f9041ea45b1044ce9c62c67de13b370e4a1185bd61b1a21dc9d930cc05d6b2",
+    "results/attacks/stealing_guided_position_selection/position_selection_by_dataset.csv": "a15f150a43f74705abbb965cab71e577f3ec13da539fdd0956d20d89b4077b93",
+    "results/attacks/stealing_guided_position_selection/position_selection_paired_successes.csv": "2d0c5d1b2a8d83e0ced0e6c4f49ae08f456c223ba671f3baabc78314f280e8ae",
+    "results/attacks/stealing_guided_position_selection/position_selection_statistics.csv": "6b2015673f675f0be1e269281967a8f8d817b2b8748f74cd10308f65be2f729b"
+  },
+  "supports": [
+    2,
+    5,
+    10,
+    15
+  ],
+  "ratios": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "seeds": [
+    42,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "outputs": [
+    "v1_asr_by_configuration.csv",
+    "v1_position_synonym_ablations.csv",
+    "v1_exact_mcnemar_holm.csv",
+    "v1_dataset_breakdown.csv"
+  ],
+  "markllm_effective_edits_verified": false,
+  "semantic_quality_measured": false
+}
