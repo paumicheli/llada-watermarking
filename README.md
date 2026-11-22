@@ -1,6 +1,6 @@
 # Evaluating Watermark Robustness in Diffusion Language Models
 
-**Trustworthy AI Models and Systems — University of Bern, Autumn 2026**  
+**Trustworthy AI Models and Systems — Joint Master in Computer Science, Universities of Bern, Neuchâtel and Fribourg, Autumn 2026**  
 **Authors:** Paul Micheli and Kenny Gayakpa  
 **Supervisor:** Roberto Gheda
 
@@ -41,6 +41,8 @@ For our **stealing-guided benchmark** (minimum support 1, requested word-edit ra
 
 The mean actual word-edit ratio in this comparison was **17.84%**. The ablations indicate that a substantial part of the improvement comes from the **eligible-position pool**; smaller gains from statistical ranking and guided synonym choice should be interpreted cautiously. A Holm-corrected paired McNemar comparison on the reference development split found a difference between ranked V2 and global random WordNet (`p = 0.00245`), but not clear statistical evidence for superiority of the more elaborate variants over the corresponding pool-controlled baselines.
 
+When the substitution budget is not capped, the V3 hybrid (V3 → V2 → V1) reaches **57.1% ASR at 29.9% changed words**, versus 18.6% for the original MarkLLM WordNet attack at 27.7%. This comparison is descriptive, and these edits often degrade fluency and meaning.
+
 **These are exploratory development results, not confirmation on a completely independent benchmark.**
 
 ## Repository organization
@@ -51,6 +53,10 @@ The principal components are:
 configs/                                   Watermarked / unwatermarked generation settings
 src/detection.py                           Local watermark detection helper
 notebooks/
+  01_data_preparation/
+    01_setup_generation.ipynb               LLaDA generation (WM / NoWM)
+    02_prepare_results.ipynb                Cleaning and pairing
+    03_watermark_detection.ipynb            Detection baseline
   02_attack_reproduction/
     04_word_deletion.ipynb                  Word deletion
     05_synonym_substitution.ipynb           WordNet substitution
@@ -58,20 +64,21 @@ notebooks/
     07_paraphrase_qwen.ipynb                Qwen paraphrasing
     08_backtranslation_qwen.ipynb           Qwen back-translation
     09_attack_comparison.ipynb              Reproduction summary and figures
+  04_exploratory/                           Early stealing-guided experiments
   Guided_attacks/
     experiments/
       stealing_guided_v2.ipynb              Word-bigram method and ablations
       benchmark_watermark_v2.ipynb          Final matched-budget development benchmark
+      report_figures.ipynb                  Figures used in the report
     archive/                                Earlier V1/V3 and pilot investigations
 results/
+  Cleaned Data/                            Cleaned paired WM / NoWM completions
   attacks/
     comparison/                             Reproduced-attack summary CSVs and figures
     fair_comparison_benchmark_v2/
       development_full/                     Final benchmark summary outputs
       development_pilot/                    Earlier benchmark and diagnostics
 ```
-
-> Folder names and notebook paths above describe the project organization used during the experiments. If your checkout differs, locate the notebook by its basename. Earlier notebooks may also depend on existing local input files under `results/Cleaned Data/` and `results/attacks/`.
 
 ## Attack methodology
 
@@ -94,6 +101,7 @@ These are **Jupyter notebooks**, not a single-command application. The main depe
 3. For **detection and classical attacks**, prepare the paired saved completions and run the detection and reproduction notebooks in sequence.
 4. For **Qwen rewriting**, use a GPU runtime and the corresponding paraphrasing/back-translation notebooks. Our reported rewriting experiments used Qwen2.5-7B-Instruct on an NVIDIA L4.
 5. For **our attack**, start with `notebooks/Guided_attacks/experiments/benchmark_watermark_v2.ipynb`. Check its configuration, input paths, saved detector and tokenizer, and output-directory settings before running. The benchmark requires the paired cleaned completions and detection baseline; regenerating the underlying LLaDA texts is not necessary if these are already available.
+6. To rebuild the **report figures** from the saved benchmark summaries, run `notebooks/Guided_attacks/experiments/report_figures.ipynb` (no GPU required).
 
 **Reproduction caveat:** Some notebooks reference a local checkout of the original watermarking implementation and local result paths. The repository is an academic research record; it does not provide a verified, fully automated installation-and-rerun procedure from a fresh machine.
 
@@ -107,7 +115,7 @@ When working in Google Colab, **copy JSON/JSONL/CSV results to persistent storag
 
 ## Limitations
 
-- A successful watermark-removal attack does **not automatically preserve meaning or fluency**. The Qwen experiments use an embedding-based similarity check; the matched-budget lexical benchmark does not establish equivalent semantic quality across methods.
+- A successful watermark-removal attack does **not automatically preserve meaning or fluency**. The Qwen experiments use an embedding-based similarity check; the matched-budget lexical benchmark does not establish equivalent semantic quality across methods. WordNet lookups are applied without stop-word or part-of-speech filtering, so function words are often replaced by unrelated senses (e.g., "a" → "adenine").
 - The ten development splits overlap, and methods were refined on this corpus. Reported statistical comparisons are exploratory.
 - A post-hoc tokenization analysis (V3) should not be confused with access to LLaDA's hidden generation-time token states or watermark key.
 - Results are specific to the model, watermark configuration, prompts, detector, and attack procedures used here.
@@ -117,12 +125,15 @@ When working in Google Colab, **copy JSON/JSONL/CSV results to persistent storag
 This project builds on:
 
 - Gloaguen et al., **[Watermarking Diffusion Language Models](https://github.com/eth-sri/diffusion-lm-watermark)** (ICLR 2026), including the official code and watermark detector.
+- Kirchenbauer et al., *A Watermark for Large Language Models* (ICML 2023).
+- Jovanović et al., *Watermark Stealing in Large Language Models* (ICML 2024).
 - Nie et al., *Large Language Diffusion Models* (LLaDA).
 - Tu et al., *WaterBench: Towards Holistic Evaluation of Watermarks for Large Language Models*.
 - Pan et al., *MarkLLM: An Open-Source Toolkit for LLM Watermarking*.
 - Miller, *WordNet: A Lexical Database for English*.
+- Devlin et al., *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*.
 - Qwen Team, *Qwen2.5 Technical Report*.
 - Reimers and Gurevych, *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks*.
 
-**Course:** Seminar Trustworthy AI Models and Systems, University of Bern (2026).  
+**Course:** Seminar Trustworthy AI Models and Systems, Joint Master in Computer Science, Universities of Bern, Neuchâtel and Fribourg (2026).  
 **Supervisor:** Roberto Gheda.
