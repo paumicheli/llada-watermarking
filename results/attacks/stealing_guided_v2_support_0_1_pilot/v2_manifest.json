@@ -1,0 +1,33 @@
+{
+  "experiment_id": "v2_min_support_0_1_pilot_2026_11_21",
+  "input_sha256": {
+    "results/Cleaned Data/watermarked_600.jsonl": "0642624bd882eae52cf0f40f6e01cf1bbff631131700d5552fa43adf83d1a835",
+    "results/Cleaned Data/unwatermarked_600.jsonl": "a334b970ced7cdead0d4dce6bcf586bc5deecdea681288bf2875b45e8ba61dd2",
+    "results/attacks/baseline_original.jsonl": "fb8901765ec0e41ea1387d5dfd9a2adb28dcc035f6e37999791289ced538bdbc",
+    "src/detection.py": "eb69431e6f8354d503dffa0fcf21bd6385855645489eb62f79b7471167859d46"
+  },
+  "completed_checkpoints": 10,
+  "expected_checkpoints": 10,
+  "pending_checkpoints": [],
+  "methods_matched": [
+    "v2_sum_random",
+    "v2_sum_guided",
+    "v2_max_random",
+    "v2_random_pool",
+    "v1_score_random_matched",
+    "random_wordnet_matched"
+  ],
+  "methods_descriptive": [
+    "v2_hybrid_random",
+    "v1_score_random_native"
+  ],
+  "primary_estimand": "ASR on originally detected WM outputs, per split",
+  "matched_budget_definition": "min(round(r*n_words), n_v2_eligible, n_v1_eligible) per text",
+  "note": "support 0 and 1 are identical for observed-only scoring; unseen bigrams are None",
+  "warnings": [
+    "All analyses exploratory; train/test splits overlap and dataset already used in V1 development",
+    "Unobserved candidate bigrams are unknown, not evidence of a low watermark score",
+    "Hybrid and V1-native are not guaranteed equal budgets",
+    "No semantic-preservation metric"
+  ]
+}

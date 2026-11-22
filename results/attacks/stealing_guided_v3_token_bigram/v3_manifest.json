@@ -1,0 +1,47 @@
+{
+  "experiment_id": "v3_posthoc_token_bigram_v1_2026_11_21",
+  "input_sha256": {
+    "results/Cleaned Data/watermarked_600.jsonl": "0642624bd882eae52cf0f40f6e01cf1bbff631131700d5552fa43adf83d1a835",
+    "results/Cleaned Data/unwatermarked_600.jsonl": "a334b970ced7cdead0d4dce6bcf586bc5deecdea681288bf2875b45e8ba61dd2",
+    "results/attacks/baseline_original.jsonl": "fb8901765ec0e41ea1387d5dfd9a2adb28dcc035f6e37999791289ced538bdbc",
+    "src/detection.py": "eb69431e6f8354d503dffa0fcf21bd6385855645489eb62f79b7471167859d46"
+  },
+  "tokenizer": "GSAI-ML/LLaDA-8B-Instruct",
+  "tokenizer_vocab_sha256": "2d2bab73abe3bf56a7f5d4572eee57e7705387526c05f043b8412a86b6175022",
+  "alignment_mode": "token_offsets",
+  "completed_checkpoints": 100,
+  "expected_checkpoints": 100,
+  "pending_checkpoints": [],
+  "methods_matched": [
+    "v3_sum_random",
+    "v3_mean_random",
+    "v3_max_random",
+    "v3_sum_guided",
+    "v3_random_pool",
+    "v2_sum_random_matched",
+    "v1_score_random_matched",
+    "random_wordnet_matched"
+  ],
+  "methods_common_pool": [
+    "v3_common_sum_random",
+    "v2_common_sum_random",
+    "v1_common_score_random",
+    "random_common_pool"
+  ],
+  "methods_descriptive": [
+    "v3_hybrid_random"
+  ],
+  "matched_budget_definition": "min(round(r*n_words),n_V3,n_V2,n_V1) words per text",
+  "common_budget_definition": "min(round(r*n_words),n_intersection(V3,V2,V1)) words per text",
+  "comparison": "Matched counts do not equate eligible pools; common cohort isolates ranking within intersection",
+  "primary_estimand": "ASR on originally detected WM texts, per split",
+  "warnings": [
+    "Exploratory: overlapping splits, dataset already used to develop V1/V2",
+    "Post-hoc retokenization, not original LLaDA generation tokens",
+    "No watermark metadata used as attack features",
+    "Unsupported token bigrams are unknown, not low-scored",
+    "Guided synonyms limited to deterministic subset; report observed guidance fraction",
+    "Hybrid not matched in real edit budget",
+    "No semantic preservation metric"
+  ]
+}

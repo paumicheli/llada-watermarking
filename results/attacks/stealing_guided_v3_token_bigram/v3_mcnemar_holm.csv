@@ -1,0 +1,13 @@
+split_seed,min_support,ratio,comparison,method_a,method_b,n,asr_a,asr_b,difference_pp,A_only_success,B_only_success,discordant,p_raw,p_holm,holm_below_0_05
+42,2,0.1,v3_vs_v2_equal_edits,v3_sum_random,v2_sum_random_matched,195,0.08205128205128205,0.06666666666666667,1.5384615384615385,4,1,5,0.375,1.0,False
+42,2,0.1,v3_vs_v1_equal_edits,v3_sum_random,v1_score_random_matched,195,0.08205128205128205,0.06666666666666667,1.5384615384615385,5,2,7,0.453125,1.0,False
+42,2,0.1,v3_score_vs_random_pool,v3_sum_random,v3_random_pool,195,0.08205128205128205,0.07692307692307693,0.5128205128205123,5,4,9,1.0,1.0,False
+42,2,0.1,v3_vs_v2_same_common_pool,v3_common_sum_random,v2_common_sum_random,195,0.05641025641025641,0.046153846153846156,1.0256410256410255,2,0,2,0.5,1.0,False
+42,2,0.2,v3_vs_v2_equal_edits,v3_sum_random,v2_sum_random_matched,195,0.22564102564102564,0.23076923076923078,-0.5128205128205138,8,9,17,1.0,1.0,False
+42,2,0.2,v3_vs_v1_equal_edits,v3_sum_random,v1_score_random_matched,195,0.22564102564102564,0.1641025641025641,6.153846153846154,20,8,28,0.03569813817739487,0.4283776581287384,False
+42,2,0.2,v3_score_vs_random_pool,v3_sum_random,v3_random_pool,195,0.22564102564102564,0.2,2.5641025641025634,12,7,19,0.359283447265625,1.0,False
+42,2,0.2,v3_vs_v2_same_common_pool,v3_common_sum_random,v2_common_sum_random,195,0.07692307692307693,0.07692307692307693,0.0,0,0,0,1.0,1.0,False
+42,2,0.3,v3_vs_v2_equal_edits,v3_sum_random,v2_sum_random_matched,195,0.2717948717948718,0.27692307692307694,-0.5128205128205165,9,10,19,1.0,1.0,False
+42,2,0.3,v3_vs_v1_equal_edits,v3_sum_random,v1_score_random_matched,195,0.2717948717948718,0.24615384615384617,2.5641025641025603,20,15,35,0.4995598332025112,1.0,False
+42,2,0.3,v3_score_vs_random_pool,v3_sum_random,v3_random_pool,195,0.2717948717948718,0.2512820512820513,2.0512820512820493,16,12,28,0.5715881884098053,1.0,False
+42,2,0.3,v3_vs_v2_same_common_pool,v3_common_sum_random,v2_common_sum_random,195,0.06153846153846154,0.06153846153846154,0.0,0,0,0,1.0,1.0,False

@@ -1,0 +1,62 @@
+{
+  "experiment_id": "v3_posthoc_token_bigram_v1_2026_11_21",
+  "split_seeds": [
+    42,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "min_supports": [
+    2,
+    5
+  ],
+  "ratios": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "alpha": 0.5,
+  "methods_matched": [
+    "v3_sum_random",
+    "v3_mean_random",
+    "v3_max_random",
+    "v3_sum_guided",
+    "v3_random_pool",
+    "v2_sum_random_matched",
+    "v1_score_random_matched",
+    "random_wordnet_matched"
+  ],
+  "methods_common_pool": [
+    "v3_common_sum_random",
+    "v2_common_sum_random",
+    "v1_common_score_random",
+    "random_common_pool"
+  ],
+  "methods_descriptive": [
+    "v3_hybrid_random"
+  ],
+  "store_attacked_text": false,
+  "max_guided_synonyms": 16,
+  "tokenizer_name": "GSAI-ML/LLaDA-8B-Instruct",
+  "tokenizer_class": "TokenizersBackend",
+  "tokenizer_vocab_sha256": "2d2bab73abe3bf56a7f5d4572eee57e7705387526c05f043b8412a86b6175022",
+  "transformers_version": "5.22.1",
+  "nltk_version": "3.10.4",
+  "alignment_mode": "token_offsets",
+  "add_special_tokens": false,
+  "input_sha256": {
+    "results/Cleaned Data/watermarked_600.jsonl": "0642624bd882eae52cf0f40f6e01cf1bbff631131700d5552fa43adf83d1a835",
+    "results/Cleaned Data/unwatermarked_600.jsonl": "a334b970ced7cdead0d4dce6bcf586bc5deecdea681288bf2875b45e8ba61dd2",
+    "results/attacks/baseline_original.jsonl": "fb8901765ec0e41ea1387d5dfd9a2adb28dcc035f6e37999791289ced538bdbc",
+    "src/detection.py": "eb69431e6f8354d503dffa0fcf21bd6385855645489eb62f79b7471167859d46"
+  },
+  "notes": "Post-hoc LLaDA tokenizer IDs; WordNet word-level edits; only completion text features"
+}
