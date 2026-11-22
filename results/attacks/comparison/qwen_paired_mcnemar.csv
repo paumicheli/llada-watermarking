@@ -1,0 +1,2 @@
+Common eligible + semantically valid,Paraphrasing ASR,Back-translation ASR,Only paraphrasing succeeds,Only back-translation succeeds,McNemar exact p-value
+529,0.9206049149338374,0.6370510396975425,167,17,3.77815257691817e-32

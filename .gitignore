@@ -33,3 +33,11 @@ results/*.jsonl
 results/attacks/**/*.jsonl
 
 # Keep CSV summaries available for GitHub
+notebooks/02_attack_reproduction/evaluation_watermark_paraphrased_backtranslation.ipynb
+results/attacks/fair_comparison_benchmark_v2/development_pilot/observations.csv
+
+# Large benchmark observation files
+results/attacks/**/observations.csv
+
+# Human evaluation answer keys
+results/attacks/**/human_eval_blinded_key.csv
